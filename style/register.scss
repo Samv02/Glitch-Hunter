@@ -1,0 +1,118 @@
+/*IMPORTS AND VARIABLES*/
+@import "./variables.scss";
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: url(../content/svg/background-login.svg);
+    background-color: $neutral--300;
+    background-size: cover;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    
+    .form-handler{
+        background-color: $neutral--900;
+        border-radius: 10px;
+        padding: 2rem;
+        margin: 4rem 0;
+        width: 30%;
+        .title{
+            margin-bottom: 10px;
+            h1{
+                color: $neutral--100;
+                text-align: center;
+                font-size: 24px;
+                line-height: 30px;
+            }
+            h2{
+                color: $neutral--700;
+                text-align: center;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+
+            label{
+                font-family: $font-main;
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $neutral--100;
+                margin-bottom: 5px;
+                margin-top: 15px;
+            }
+            input{
+                background-color: $black--main;
+                color: $neutral--100;
+            }
+            a{
+                font-size: 12px;
+                color: $primary--500;
+                margin-bottom: 25px;
+                display: inline-block;
+            }
+            input[type='file']{
+                display: none;
+            }
+            label.profilPic{
+                background-color: $black--main;
+                border: dashed 2px $neutral--700;
+                padding: 2rem;
+                border-radius: 5px;
+                text-align: center;
+                margin-bottom: 15px;
+                transition: all ease-in-out .2s;
+
+                &:hover{
+                    box-shadow: 0px 0px 10px $neutral--700;
+                    cursor: pointer;
+                }
+
+                span{
+                    display: block;
+                    &#file-name{
+                        padding: .5rem;
+                        width: 50%;
+                        margin: 0 auto;
+                        text-transform: none;
+                        font-weight: 500;
+                        color: $neutral--900;
+                        margin-top: 10px;
+                        transition: .3s ease-in-out all ;
+
+                        &:hover{
+                            background: $primary--900;
+                            color: $neutral--100;
+                        }
+                    }
+                }
+            }
+        }
+        p:not(.errorFormMsg){
+            font-size: 12px;
+            color: $neutral--100;
+            margin-top: 10px;
+            a{
+                margin: 0 0 0 5px;
+                color: $primary--500;
+            }
+        } 
+
+    }
+} 
+
+@media screen and (max-width: 550px) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .form-handler{
+            width: 80%;
+        }
+    }
+}

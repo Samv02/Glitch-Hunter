@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShibaVerse - Register</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/register.css">
+</head>
+<body>
+    <div class="form-handler">
+        <div class="title">
+            <h1>Vous êtes nouveau ?</h1>
+            <h2>Commencez par créer un compte :</h2>
+        </div>
+        <form action="" method="post" enctype="multipart/form-data">
+            <label for="name" class="required-field">Prénom</label>
+            <input type="text" name="name" id="name" placeholder=" " class="" required>
+            <p class="errorFormMsg" id="nameErrorMsg"></p>
+            <label for="surname" class="required-field">Nom</label>
+            <input type="text" name="surname" id="surname" placeholder=" " class="" required>
+            <p class="errorFormMsg" id="surnameErrorMsg"></p>
+            <label for="email" class="required-field">Email</label>
+            <input type="text" name="email" id="email" placeholder=" " class="" required>
+            <p class="errorFormMsg" id="emailErrorMsg"></p>
+            <label for="password" class="required-field">Mot de passe</label>
+            <input type="password" name="password" id="password" placeholder=" " class="" required>
+            <p class="errorFormMsg" id="passwordErrorMsg"></p>
+            <label for="confirmPassword" class="required-field">Vérification du mot de passe</label>
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder=" " class="" required>
+            <p class="errorFormMsg" id="confirmPasswordErrorMsg"></p>
+            <label for="profilPic" class="profilPic">
+                <span>Ajoutez une image de profil :</span>
+                <span class="primary-button" id="file-name">Choisir un fichier</span>
+                <input type="file" name="profilPic" id="profilPic" accept="/image">
+            </label>
+            <button type="submit" class="primary-button" id="submitButton">S'inscrire</button>
+        </form>
+        <p>Déjà inscrit ?<a href="login.html">Se connecter</a></p>
+    </div>
+
+    <script src="./js/register_form_validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/*IMPORTS AND VARIABLES*/
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+/*MAIN CLASSES*/
+label.required-field::after {
+  content: "*";
+  color: red;
+}
+
+/*MAIN STYLES & COMPONENTS*/
+h1, h2, h3, h4, h5, h6, p, input, select, option, a, button {
+  font-family: "Poppins", Helvetica, Arial;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+input {
+  border: none;
+  border-bottom: #EAECEE solid 2px;
+  padding: 0.8rem;
+  background-color: #0f0f10;
+  outline: none;
+  border-radius: 5px 5px 0 0;
+  transition: all ease-in-out 0.2s;
+}
+input:-moz-placeholder-shown {
+  border-radius: 5px;
+  color: #EAECEE;
+  border: none;
+  outline: none;
+}
+input:placeholder-shown {
+  border-radius: 5px;
+  color: #EAECEE;
+  border: none;
+  outline: none;
+}
+input:focus {
+  border-bottom: #5BC0FB solid 2px;
+  border-radius: 5px 5px 0 0;
+}
+input.error {
+  border-bottom: red solid 2px;
+  background-color: #430505 !important;
+  border-radius: 5px 5px 0 0;
+}
+
+.errorFormMsg {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  transition: all ease-in-out 0.2s;
+}
+
+.primary-button {
+  background-color: #5BC0FB;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: #EAECEE;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.primary-button.blocked {
+  background: #A9B3BB;
+  cursor: not-allowed;
+}/*# sourceMappingURL=main.css.map */
