@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Inter);
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.button-primary {
+  background-color: #2F7ABE;
+  color: white;
+  font-family: "Inter", serif;
+  display: inline-block;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  transition: all ease-in-out 0.15s;
+}
+.button-primary:hover {
+  cursor: pointer;
+  background-color: #154c80;
+}
+
+.button-secondary {
+  background-color: white;
+  color: #2F7ABE;
+  font-family: "Inter", serif;
+  display: inline-block;
+  border: 3px solid #2F7ABE;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-align: center;
+  transition: all ease-in-out 0.15s;
+}
+.button-secondary:hover {
+  cursor: pointer;
+  background-color: #2F7ABE;
+  color: white;
+}
+
+input {
+  border-radius: 50px;
+  padding: 10px 20px;
+  border: 3px solid #2F7ABE;
+  font-family: "Inter", serif;
+}
+input.error {
+  border-color: red;
+  background-color: #FFD6D6;
+}
+
+label {
+  margin: 5px 0;
+  position: relative;
+}
+label.requiredInputLabel::before {
+  content: "* ";
+  color: red;
+}
+label span.errorSpanMsg {
+  display: block;
+  color: red;
+  font-size: 12px;
+}
+
+header {
+  background-color: #2F7ABE;
+  padding: 24px 42px;
+}
+header img {
+  width: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header nav > a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24.7px;
+  font-weight: 600;
+  border: solid 1px white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all ease-in-out 0.15s;
+}
+header nav > a:hover {
+  background-color: white;
+  color: #2F7ABE;
+}
+header nav .nav-menu--wrapper {
+  display: none;
+}
+header nav.user_is_logged_in #loginNavButton {
+  display: none;
+}
+header nav.user_is_logged_in #registerNavButton {
+  display: none;
+}
+header nav.user_is_logged_in .nav-menu--wrapper {
+  display: block;
+  position: relative;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: all ease-in-out 0.15s;
+}
+header nav.user_is_logged_in .nav-menu--wrapper:hover {
+  background-color: white;
+}
+header nav.user_is_logged_in .nav-menu--wrapper:hover .profilPic--wrapper i {
+  color: #2F7ABE;
+}
+header nav.user_is_logged_in .nav-menu--wrapper .profilPic--wrapper {
+  gap: 10px;
+}
+header nav.user_is_logged_in .nav-menu--wrapper .profilPic--wrapper img {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header nav.user_is_logged_in .nav-menu--wrapper .profilPic--wrapper i {
+  color: rgb(255, 255, 255);
+  transform: rotate(-90deg);
+  transition: all ease-in-out 0.15s;
+}
+header nav.user_is_logged_in .nav-menu--wrapper .dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: all ease-in-out 0.3s;
+}
+header nav.user_is_logged_in .nav-menu--wrapper .dropdown-menu.active {
+  visibility: visible;
+  opacity: 1;
+  top: 110%;
+}
+header nav.user_is_logged_in .nav-menu--wrapper .dropdown-menu a {
+  padding: 10px 20px;
+  width: 200px;
+  color: black;
+  text-decoration: none;
+  font-family: "Inter", serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+header nav.user_is_logged_in .nav-menu--wrapper .dropdown-menu a:hover {
+  background-color: #2F7ABE;
+  color: white;
+}
+header nav.user_is_logged_in .nav-menu--wrapper.active {
+  background-color: white;
+}
+header nav.user_is_logged_in .nav-menu--wrapper.active .profilPic--wrapper i {
+  color: #2F7ABE;
+  transform: rotate(-180deg);
+}/*# sourceMappingURL=main.css.map */

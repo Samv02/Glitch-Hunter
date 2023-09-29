@@ -1,0 +1,39 @@
+body{
+    form{
+        border-radius: 50px;
+        border: solid 3px #2F7ABE;
+        width: 40%;
+        margin: 0 auto;
+        padding: 45px;
+        margin-top: 2rem;
+    }
+    .logoTop{
+        width: 250px;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin-top: 50PX;
+    }
+
+    .centered-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        
+        a{
+            border-radius: 10px;
+            padding: 30PX 60PX;
+        }
+    }
+    .post--vrapper{
+        display: flex;
+    }
+
+    h1{
+        text-align: center;
+        margin: 0 auto;
+        font-size: 37px;
+        width: 80%;
+        margin-top: 50PX;
+    }
+}
