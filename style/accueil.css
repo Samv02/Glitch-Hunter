@@ -20,7 +20,7 @@ body .centered-button {
 }
 body .centered-button a {
   border-radius: 10px;
-  padding: 30PX 60PX;
+  padding: 15PX 40PX;
 }
 body .post--vrapper {
   display: flex;
@@ -31,4 +31,13 @@ body h1 {
   font-size: 37px;
   width: 80%;
   margin-top: 50PX;
+}
+body .popular-topic {
+  background-color: #2F7ABE;
+  color: white;
+  border: 1px solid black;
+  padding: 25px;
+  width: 200px; /* Ajustez la largeur en fonction de vos besoins */
+  text-align: center;
+  margin: 60px auto; /* Ajustez les marges en fonction de vos besoins */
 }/*# sourceMappingURL=accueil.css.map */

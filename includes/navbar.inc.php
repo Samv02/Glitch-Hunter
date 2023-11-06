@@ -7,19 +7,23 @@
         $user_is_logged_in = false;
     } else {
         $user_is_logged_in = true;
+        $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+        $req->execute(array($_SESSION['user']));
+        $data = $req->fetch();
     } 
+
 
 ?>
 
 <header class="flex ai-c jc-sb">
     <img src="./content/img/logo-principal.png" alt="Logo GlitchHunter Small Svg">
-    <nav class="<?php if($user_is_logged_in){ echo 'user_is_logged_in'; } if(!$user_is_logged_in){ echo 'flex'; }?>">
+    <nav class="<?php if($user_is_logged_in){ echo 'user_is_logged_in'; }?>">
         <a href="./contact.php" title="Contact">Contact</a>
         <a href="./login.php" title="Connexion" id="loginNavButton">Connexion</a>
         <a href="./register.php" title="Inscription" id="registerNavButton">Inscription</a>
         <div class="nav-menu--wrapper">
             <div class="profilPic--wrapper flex ai-c icon-space rounded-border" id="MenuProfilToggle">
-                <img id="profile-image" src="./content/profilPic/dsgjohnson.webp" alt="Photo de profil">
+                <img id="profile-image" src="<?php if($data['image_user'] > 0){ echo $data['image_user']; } else { echo './content/profilPic/profilStandard.webp'; } ?>" alt="Photo de profil">
                 <i class="fas fa-caret-up icone-blanche"></i>
             </div>        
             <div class="dropdown-menu" id="dropdown">
