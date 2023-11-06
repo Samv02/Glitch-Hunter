@@ -7,16 +7,16 @@
         $user_is_logged_in = false;
     } else {
         $user_is_logged_in = true;
-    }
+    } 
 
 ?>
 
 <header class="flex ai-c jc-sb">
     <img src="./content/img/logo-principal.png" alt="Logo GlitchHunter Small Svg">
-    <nav class="<?php if($user_is_logged_in){ echo 'user_is_logged_in'; } ?>">
+    <nav class="<?php if($user_is_logged_in){ echo 'user_is_logged_in'; } if(!$user_is_logged_in){ echo 'flex'; }?>">
         <a href="./contact.php" title="Contact">Contact</a>
         <a href="./login.php" title="Connexion" id="loginNavButton">Connexion</a>
-        <a href="./login.php" title="Connexion" id="registerNavButton">Inscription</a>
+        <a href="./register.php" title="Inscription" id="registerNavButton">Inscription</a>
         <div class="nav-menu--wrapper">
             <div class="profilPic--wrapper flex ai-c icon-space rounded-border" id="MenuProfilToggle">
                 <img id="profile-image" src="./content/profilPic/dsgjohnson.webp" alt="Photo de profil">

@@ -11,7 +11,7 @@
         $email = strtolower($email); // email transformé en minuscule
         
         // On regarde si l'utilisateur est inscrit dans la table utilisateurs
-        $check = $bdd->prepare('SELECT email, password FROM utilisateurs WHERE email = ?');
+        $check = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = ?');
         $check->execute(array($email));
         $data = $check->fetch();
         $row = $check->rowCount();        
@@ -27,16 +27,16 @@
                 {
                     if($data['type'] == "admin"){
                         $_SESSION['user'] = $data['token'];
-                         header('Location: ../accueil.php');
+                        header('Location: ../accueil.php');
                     }else{
                     // On créer la session et on redirige sur landing.php
                     $_SESSION['user'] = $data['token'];
-                    // var_dump($data) ;
-                     header('Location: ../accueil.php');
+                        var_dump($data) ;
+                        header('Location: ../accueil.php');
                     die();
                     }
                     header('Location: ../accueil.php');
-                }else{ header('Location: index.php?login_err=password'); die(); }
-            }else{ header('Location: index.php?login_err=email'); die(); }
-        }else{ header('Location: index.php?login_err=already'); die(); }
-    }else{ header('Location: index.php'); die();} // si le formulaire est envoyé sans aucune données
+                }else{ header('Location: ../login.php?login_err=password'); die(); }
+            }else{ header('Location: ../login.php?login_err=email'); die(); }
+        }else{ header('Location: ../login.php?login_err=already'); die(); }
+    }else{ header('Location: ../login.php?login_err=hello'); die();} // si le formulaire est envoyé sans aucune données
