@@ -14,7 +14,7 @@
         if (!isset($_REQUEST['action'])) {
             $_REQUEST['action'] = 0;
         }
-        
+
         if ($_REQUEST["action"] == '10') {
             session_destroy();
             header('Location: ./accueil.php');
@@ -27,7 +27,9 @@
 ?>
 
 <header class="flex ai-c jc-sb">
-    <img src="./content/img/logo-principal.png" alt="Logo GlitchHunter Small Svg">
+    <a href="/" title="Accueil">
+        <img src="./content/img/logo-principal.png" alt="Logo GlitchHunter Small Svg">
+    </a>
     <nav class="<?php if($user_is_logged_in){ echo 'user_is_logged_in'; }?>">
         <a href="./contact.php" title="Contact">Contact</a>
         <a href="./login.php" title="Connexion" id="loginNavButton">Connexion</a>
