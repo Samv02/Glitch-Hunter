@@ -26,7 +26,9 @@
     <div class="popular-topic">
         Sujet populaire
     </div>
-
+    <div class="popular-topic">
+        Sujet récent
+    </div>
 </body>
 
 </html>

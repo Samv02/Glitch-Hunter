@@ -10,7 +10,18 @@
         $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
         $req->execute(array($_SESSION['user']));
         $data = $req->fetch();
+        
+        if (!isset($_REQUEST['action'])) {
+            $_REQUEST['action'] = 0;
+        }
+        
+        if ($_REQUEST["action"] == '10') {
+            session_destroy();
+            header('Location: ./accueil.php');
+        }
     } 
+
+
 
 
 ?>
@@ -31,7 +42,7 @@
                 <a href="#"><i class="fas fa-thumbs-up"></i> Mes likes</a>
                 <a href="#"><i class="fas fa-history"></i> Mon historique</a>
                 <a href="#"><i class="fas fa-cogs"></i> Paramètres</a>
-                <a href="#"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                <a href="./accueil.php?action=10"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
             </div>
         </div>
     </nav>

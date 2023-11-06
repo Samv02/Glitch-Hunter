@@ -7,6 +7,7 @@
         // Patch XSS
         $email = htmlspecialchars($_POST['email']); 
         $password = htmlspecialchars($_POST['password']);
+        $passwordHash = hash('sha256', $password);
         
         $email = strtolower($email); // email transformé en minuscule
         
@@ -23,7 +24,7 @@
             if(filter_var($email, FILTER_VALIDATE_EMAIL))
             {
                 // Si le mot de passe est le bon
-                if($password == $data['password'])
+                if($passwordHash == $data['password'])
                 {
                     if($data['type'] == "admin"){
                         $_SESSION['user'] = $data['token'];

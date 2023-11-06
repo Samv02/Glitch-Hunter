@@ -8,7 +8,7 @@
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
         $password_retype = htmlspecialchars($_POST['verifyPassword']);
-        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+        $passwordHash = hash('sha256', $password);
         
         // On vérifie si l'utilisateur existe
         $check = $bdd->prepare('SELECT pseudo, email, password FROM utilisateurs WHERE email = ?');
@@ -43,7 +43,7 @@
                                 'type' => "user",
                                 'pseudo' => $username,
                                 'email' => $email,
-                                'password' => $password,
+                                'password' => $passwordHash,
                                 // 'ip' => $ip,
                                 'token' => bin2hex(openssl_random_pseudo_bytes(64))
                             ));
