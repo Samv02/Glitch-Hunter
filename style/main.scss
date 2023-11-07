@@ -71,6 +71,11 @@ input{
         border-color: red;
         background-color: #FFD6D6;
     }
+
+    &::placeholder{
+        font-size: 14px;
+        color: #636363;
+    }
 }
 
 label{
@@ -190,6 +195,9 @@ header{
                         i{
                             color: #2F7ABE;
                         }
+                        p{
+                            color: black;
+                        }
                     }
                 }
                 
@@ -200,6 +208,9 @@ header{
                         width: 55px; 
                         height: 55px; 
                         object-fit: cover;
+                    }
+                    p{
+                        color: white;
                     }
                     i{
                         color: rgba(255, 255, 255);
@@ -247,6 +258,9 @@ header{
                         i{
                             color: #2F7ABE;
                             transform: rotate(-180deg);
+                        }
+                        p{
+                            color: black;
                         }
                     }
                 }

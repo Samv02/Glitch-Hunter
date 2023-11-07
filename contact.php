@@ -16,18 +16,23 @@
 <?php include_once './includes/navbar.inc.php'; ?>
 
 <body>
-    <img src="./content/img/logo-principal.png" alt="Logo GlitchHunter Large Svg">
+    <img class="image" src="./content/img/logo-principal.png" alt="Logo GlitchHunter Large Svg">
     <form action="./includes/loginPost.inc.php" method="post" class="flex-column">
-        <h1>Connectez-vous!</h1>
-        <label for="email" class="requiredInputLabel">Email : <span class="errorSpanMsg" id="errorEmailMsg"></span></label>
-        <input type="email" name="email" id="email" required>
-        <label for="password" class="requiredInputLabel">Mot de passe : <span class="errorSpanMsg" id="errorPasswordMsg"></span></label>
-        <input type="password" name="password" id="password" required>
+        <h1>Vous souhaitez nous contacter ? Remplissez ce formulaire</h1>
+        <label for="pseudo" class="requiredInputLabel">Pseudo <span class="errorSpanMsg" id="errorEmailMsg"></span></label>
+        <input type="text" name="pseudo" id="pseudo" required>
+        <label for="subject" class="requiredInputLabel">Sujet<span class="errorSpanMsg" id="errorPasswordMsg"></span></label>
+        <input type="text" name="subject" id="subject" required>
+        <label for="subject" class="requiredInputLabel">Sujet<span class="errorSpanMsg" id="errorPasswordMsg"></span></label>
+        <input type="text" name="subject" id="subject" required>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        
         <input type="submit" value="Se connecter" class="button-primary">
         <a href="./register.php" class="button-secondary">S'inscrire</a>
     </form>
 
     <script src="./js/login_form_validation.js"></script>
     <script src="./js/nav_profil_menu.js"></script>
+    
 </body>
 </html>

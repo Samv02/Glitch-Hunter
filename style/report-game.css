@@ -1,0 +1,66 @@
+.form-add-game form {
+  gap: 30px;
+  background-color: #2F7ABE;
+  border-radius: 50px;
+  padding: 50px;
+}
+.form-add-game form .leftPartForm {
+  width: 25%;
+}
+.form-add-game form .leftPartForm #jaquetteGameUploadZone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  border: 3px dashed #2F7ABE;
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px 0;
+}
+.form-add-game form .leftPartForm #jaquetteGameUploadZone .button-primary {
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.form-add-game form .leftPartForm input#jaquetteGame {
+  display: none;
+}
+.form-add-game form .rightPartForm {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+.form-add-game form .rightPartForm input {
+  width: 100%;
+}
+.form-add-game form .rightPartForm textarea {
+  width: 100%;
+  height: 30vh;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  margin: 15px 0;
+  padding: 15px;
+  font-family: "Inter";
+  font-size: 14px;
+  color: black;
+  resize: none;
+}
+.form-add-game form .rightPartForm textarea::-moz-placeholder {
+  font-size: 14px;
+  color: #636363;
+}
+.form-add-game form .rightPartForm textarea::placeholder {
+  font-size: 14px;
+  color: #636363;
+}
+.form-add-game form .rightPartForm .button-secondary {
+  background-color: #1c5d99;
+  color: white;
+  font-size: 18px;
+  align-self: end;
+  width: 50%;
+}
+.form-add-game form .rightPartForm .button-secondary:hover {
+  background-color: #11497d;
+}/*# sourceMappingURL=report-game.css.map */

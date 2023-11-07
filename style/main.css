@@ -74,6 +74,14 @@ input.error {
   border-color: red;
   background-color: #FFD6D6;
 }
+input::-moz-placeholder {
+  font-size: 14px;
+  color: #636363;
+}
+input::placeholder {
+  font-size: 14px;
+  color: #636363;
+}
 
 label {
   margin: 5px 0;
@@ -186,6 +194,9 @@ header nav.user_is_logged_in .nav-menu--wrapper:hover {
 header nav.user_is_logged_in .nav-menu--wrapper:hover .profilPic--wrapper i {
   color: #2F7ABE;
 }
+header nav.user_is_logged_in .nav-menu--wrapper:hover .profilPic--wrapper p {
+  color: black;
+}
 header nav.user_is_logged_in .nav-menu--wrapper .profilPic--wrapper {
   gap: 10px;
 }
@@ -195,6 +206,9 @@ header nav.user_is_logged_in .nav-menu--wrapper .profilPic--wrapper img {
   height: 55px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+header nav.user_is_logged_in .nav-menu--wrapper .profilPic--wrapper p {
+  color: white;
 }
 header nav.user_is_logged_in .nav-menu--wrapper .profilPic--wrapper i {
   color: rgb(255, 255, 255);
@@ -237,4 +251,7 @@ header nav.user_is_logged_in .nav-menu--wrapper.active {
 header nav.user_is_logged_in .nav-menu--wrapper.active .profilPic--wrapper i {
   color: #2F7ABE;
   transform: rotate(-180deg);
+}
+header nav.user_is_logged_in .nav-menu--wrapper.active .profilPic--wrapper p {
+  color: black;
 }/*# sourceMappingURL=main.css.map */
