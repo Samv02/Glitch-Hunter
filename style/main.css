@@ -25,7 +25,7 @@
 }
 
 .content {
-  max-width: 1700px;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -87,6 +87,50 @@ label span.errorSpanMsg {
   display: block;
   color: red;
   font-size: 12px;
+}
+
+.topic {
+  background: none;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  margin-bottom: 12px;
+}
+.topic .content-topic {
+  width: 80%;
+}
+.topic .content-topic .title-topic {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.14px;
+}
+.topic .likes-topic {
+  width: 20%;
+  display: flex;
+  justify-content: end;
+}
+
+.page-title {
+  background-color: #2F7ABE;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 0 0 80px 0;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.page-title h1 {
+  color: white;
+  font-size: 48px;
+}
+.page-title i {
+  color: white;
+  font-size: 36px;
 }
 
 header {

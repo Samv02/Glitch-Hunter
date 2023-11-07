@@ -1,0 +1,27 @@
+body{
+    img{
+        width: 150px;
+        display: flex;
+        align-items: center;
+        margin: auto;
+    }
+    form{
+        border-radius: 50px;
+        border: solid 3px #2F7ABE;
+        width: 40%;
+        margin: 0 auto;
+        padding: 45px;
+        margin-top: 2rem;
+
+        h1{
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        input[type="submit"] {
+            margin: 20px 0 10px 0;
+            font-size: 16px;
+
+        }
+    }
+}

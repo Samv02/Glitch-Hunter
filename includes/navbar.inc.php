@@ -36,14 +36,17 @@
         <a href="./register.php" title="Inscription" id="registerNavButton">Inscription</a>
         <div class="nav-menu--wrapper">
             <div class="profilPic--wrapper flex ai-c icon-space rounded-border" id="MenuProfilToggle">
-                <img id="profile-image" src="<?php if($data['image_user'] > 0){ echo $data['image_user']; } else { echo './content/profilPic/profilStandard.webp'; } ?>" alt="Photo de profil">
+                <img id="profile-image" src="<?php if($data['image_user']){ echo './content/img/profilPic/' . $data['image_user']; } else { echo './content/img/profilPic/profilStandard.webp'; } ?>" alt="Photo de profil">
+                <p>
+                    <?php echo $data['pseudo'] ?>
+                </p>
                 <i class="fas fa-caret-up icone-blanche"></i>
             </div>        
             <div class="dropdown-menu" id="dropdown">
-                <a href="#"><i class="fas fa-edit"></i> Mes posts</a>
-                <a href="#"><i class="fas fa-thumbs-up"></i> Mes likes</a>
-                <a href="#"><i class="fas fa-history"></i> Mon historique</a>
-                <a href="#"><i class="fas fa-cogs"></i> Paramètres</a>
+                <a href="./my-posts.php"><i class="fas fa-edit"></i> Mes posts</a>
+                <a href="./liked-posts.php"><i class="fas fa-thumbs-up"></i> Mes likes</a>
+                <a href="./history.php"><i class="fas fa-history"></i> Mon historique</a>
+                <a href="./settings.php"><i class="fas fa-cogs"></i> Paramètres</a>
                 <a href="./accueil.php?action=10"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
             </div>
         </div>

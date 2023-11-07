@@ -16,7 +16,7 @@
 <?php include_once './includes/navbar.inc.php' ?>
 
 <body>
-    <form action="./includes/registerPost.inc.php" method="post" class="flex-column">
+    <form action="./includes/registerPost.inc.php" method="post" class="flex-column" enctype="multipart/form-data">
         <img src="./content/img/logo-principal.png" alt="Logo GlitchHunter Large Svg">
         <h1>Nouveau chez nous ? <span class="underline">Inscrivez-vous !</span></h1>
         <label for="username" class="requiredInputLabel">Pseudo : <span class="errorSpanMsg" id="errorUsernameMsg"></span></label>

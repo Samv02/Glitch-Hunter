@@ -117,34 +117,6 @@ body{
                     background-color: #D9D9D9;
                 }
             }
-        }
-
-        .topic {
-            background: none;
-            width: 100%;
-            display: flex;
-            align-items: end;
-            gap: 20px;
-            padding: 20px;
-            border: 1px solid black;
-            margin-bottom: 12px;
-
-            .content-topic{
-                width: 80%;
-
-                .title-topic{
-                    font-family: Inter;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 600;
-                    letter-spacing: -0.14px;
-                }
-            }
-            .likes-topic{
-                width: 20%;
-                display: flex;
-                justify-content: end;
-            }
-        }   
+        }  
     }
 }
