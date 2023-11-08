@@ -147,6 +147,30 @@ label span.errorSpanMsg {
   font-size: 36px;
 }
 
+#info-toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 20px;
+  border-radius: 3px;
+  border-bottom: solid 3px green;
+  background: #f4f4f4;
+  box-shadow: #d2d2d2 0px 0px 10px 1px;
+  transition: all ease-in-out 0.2s;
+}
+#info-toast .flex {
+  gap: 10px;
+}
+#info-toast .flex i {
+  color: green;
+  font-size: 18px;
+}
+#info-toast:hover {
+  cursor: pointer;
+  transform: translate(-50%, -10px);
+}
+
 header {
   background-color: #2F7ABE;
   padding: 24px 42px;

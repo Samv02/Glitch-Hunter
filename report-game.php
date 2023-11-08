@@ -15,10 +15,36 @@
 
 <?php include_once './includes/navbar.inc.php'; ?>
 
+<?php
+// Récupérer l'URL actuelle
+$currentURL = $_SERVER['REQUEST_URI'];
+
+// Vérifier si "?reg_err=success" est présent dans l'URL
+if (strpos($currentURL, '?reg_err=success') !== false) {
+    // Le paramètre est présent, afficher le contenu spécifique
+    $isSuccessfulImport = true;
+} else {
+    // Le paramètre n'est pas présent, afficher un autre contenu ou ne rien afficher
+    $isSuccessfulImport = false;
+}
+?>
+
 <body>
     <section class="page-title">
         <i class="fa-solid fa-pen-to-square"></i>
         <h1>Demande d'ajout de jeu</h1>
+    </section>
+    <section id="info-toast">
+        <?php
+        
+        if ($isSuccessfulImport) {
+            echo '<div class="flex">';
+            echo '<i class="fa-solid fa-check"></i>';
+            echo '<p>Requête de jeu envoyée avec succès.</p>';
+            echo '</div>';
+        }
+        
+        ?>
     </section>
     <section class="content form-add-game">
         <form action="./includes/reportGamePost.inc.php" method="post" enctype="multipart/form-data" class="flex">
@@ -39,6 +65,12 @@
         </form>
     </section>
 
+    <script type="text/javascript">
+        const toast = document.getElementById('info-toast');
+        toast.addEventListener('click', function () {
+            toast.style.display = 'none';
+        });
+    </script>
     <script src="./js/report_game_validation.js"></script>
 </body>
 

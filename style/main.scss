@@ -146,6 +146,32 @@ label{
     }
 }
 
+#info-toast{
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%,0);
+    padding: 20px;
+    border-radius: 3px;
+    border-bottom: solid 3px green;
+    background: #f4f4f4;
+    box-shadow: #d2d2d2 0px 0px 10px 1px;
+    transition: all ease-in-out .2s;
+    .flex {
+        gap: 10px;
+
+        i{
+            color: green;
+            font-size: 18px;
+        }
+    }
+
+    &:hover{
+        cursor: pointer;
+        transform: translate(-50%, -10px);
+    }
+}
+
 //STYLE MAIN
 header{
     background-color: #2F7ABE;
