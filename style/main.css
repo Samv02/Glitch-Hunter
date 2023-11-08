@@ -97,6 +97,12 @@ label span.errorSpanMsg {
   font-size: 12px;
 }
 
+.info-upload {
+  font-size: 12px;
+  color: #636363;
+  margin-bottom: 2px;
+}
+
 .topic {
   background: none;
   width: 100%;

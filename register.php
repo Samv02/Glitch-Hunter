@@ -30,6 +30,8 @@
         <label for="profilPic" id="profilPicUploadZone">
             <p>Insérez une photo de profil :</p>
             <div class="button-primary" id="file-name">Importer une photo</div>
+            <p class="info-upload">Format accepté : .jpeg, .png, .gif</p>
+            <p class="info-upload">Poids Maximal : 2Mo</p>
             <span class="errorSpanMsg" id="errorProfilPicMsg"></span>
         </label>
         <input type="file" name="profilPic" id="profilPic">

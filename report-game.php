@@ -26,6 +26,8 @@
                 <label for="jaquetteGame" id="jaquetteGameUploadZone">
                     <p>Ajoutez la jaquette du jeu</p>
                     <div class="button-primary" id="file-name">Importer une photo</div>
+                    <p class="info-upload">Format accepté : .jpeg, .png, .gif</p>
+                    <p class="info-upload">Poids Maximal : 2Mo</p>
                 </label>
                 <input type="file" name="jaquetteGame" id="jaquetteGame">
             </div>

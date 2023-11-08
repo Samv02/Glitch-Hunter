@@ -62,7 +62,7 @@
                 'synopsis_jeu' => $synopsisGame,
                 'image_jeu' => $newFileName
             ));
-            header('Location:../login.php?reg_err=success');
+            header('Location:../report-game.php?reg_err=success');
             die();
-        }else{ header('Location: ../register.php?reg_err=already'); die();}
+        }else{ header('Location: ../report-game.php?reg_err=already'); die();}
     }
