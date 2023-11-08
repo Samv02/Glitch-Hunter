@@ -14,50 +14,65 @@
 
 <?php include_once './includes/navbar.inc.php'; ?>
 
+<?php
+
+// On inclu la connexion à la bdd
+require_once './includes/config.inc.php';
+
+//Vérifier si l'utilisateur est connecté et récupérer son id via le token conservé dans la session, sinon le rediriger vers login.php
+if (isset($_SESSION['user'])) {
+    $check = $bdd->prepare('SELECT id_utilisateur FROM utilisateurs WHERE token = ?');
+    $check->execute(array($_SESSION['user']));
+    $data = $check->fetch();
+    $row = $check->rowCount();
+
+    if ($row == 1) {
+        $id_utilisateur = $data['id_utilisateur'];
+    } else header('Location: ./login.php');
+} else header('Location: ./login.php');
+
+//Récupérer un tableau contenant les posts de l'utilisateur
+$req_bug = $bdd->prepare("SELECT * FROM bug WHERE id_utilisateur = ?");
+$req_bug->execute(array($id_utilisateur));
+
+?>
+
 <body>
     <section class="page-title">
         <i class="fa-solid fa-pen-to-square"></i>
         <h1>Mes Post</h1>
     </section>
-    <section class="content topic-list">
-        <div class="topic">
-            <div class="content-topic">
-                <div class="title-topic">
-                    Bug Pokemon : J'ai plus mon équipe
+    <section class="content topic-list"> 
+        
+        <?php
+                while($posts = $req_bug->fetch(PDO::FETCH_ASSOC)){
+        ?>
+            <div class="topic">
+                <div class="content-topic">
+                    <div class="title-topic">
+                        <?php echo $posts['nom'] ?>
+                    </div>
+                    <div class="game-topic">
+                        <p>
+                            Jeu : <?php 
+                            $req_game = $bdd->prepare("SELECT nom_jeu FROM jeu WHERE id_jeu = ?");
+                            $req_game->execute(array($posts['id_jeu']));
+                            $result = $req_game->fetch(PDO::FETCH_ASSOC);
+                            echo $result['nom_jeu'];
+                            ?>
+                        </p>
+                    </div>
+                    <div class="description-topic">
+                        <?php echo $posts['description'] ?>
+                    </div>
                 </div>
-                <div class="game-topic">
-                    Jeux : Pokemon
-                </div>
-                <div class="state-topic">
-                    Etat : Résolu
-                </div>
-                <div class="description-topic">
-                    Dernier message de xXD4rKCramptesxX : C'est parce que en fait la technique de duplication de la génération 6 est équivalent à la région sud du pôle nord
-                </div>
-            </div>
-            <div class="likes-topic">
-                Nb. Likes : 4000
-            </div>
-        </div>
-        <div class="topic">
-            <div class="content-topic">
-                <div class="title-topic">
-                    Bug Pokemon : J'ai plus mon équipe
-                </div>
-                <div class="game-topic">
-                    Jeux : Pokemon
-                </div>
-                <div class="state-topic">
-                    Etat : Résolu
-                </div>
-                <div class="description-topic">
-                    Dernier message de xXD4rKCramptesxX : C'est parce que en fait la technique de duplication de la génération 6 est équivalent à la région sud du pôle nord
+                <div class="likes-topic">
+                    Nb. Likes : <?php echo $posts['nb_likes'] ?>
                 </div>
             </div>
-            <div class="likes-topic">
-                Nb. Likes : 4000
-            </div>
-        </div>
+        <?php
+                }        
+        ?>
     </section>
 </body>
 
