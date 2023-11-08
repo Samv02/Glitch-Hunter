@@ -89,6 +89,9 @@ body .subjects.trending-subjects .subject-selectors .recent-topics {
   text-align: center;
   background-color: #D9D9D9;
 }
+body .subjects.recent-subjects {
+  margin-bottom: 100px;
+}
 body .subjects.recent-subjects .subject-selectors .recent-topics {
   text-align: center;
   color: white;

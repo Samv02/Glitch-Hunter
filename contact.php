@@ -17,21 +17,18 @@
 
 <body>
     <img class="image" src="./content/img/logo-principal.png" alt="Logo GlitchHunter Large Svg">
-    <form action="./includes/loginPost.inc.php" method="post" class="flex-column">
+    <form action="./includes/loginPost.inc.php" method="post" class="flex-column" style="margin-bottom: 50px">
         <h1>Vous souhaitez nous contacter ? Remplissez ce formulaire</h1>
-        <label for="pseudo" class="requiredInputLabel">Pseudo <span class="errorSpanMsg" id="errorEmailMsg"></span></label>
+        <label for="pseudo" class="requiredInputLabel">Pseudo</label>
         <input type="text" name="pseudo" id="pseudo" required>
-        <label for="subject" class="requiredInputLabel">Sujet<span class="errorSpanMsg" id="errorPasswordMsg"></span></label>
+        <label for="subject" class="requiredInputLabel">Sujet</label>
         <input type="text" name="subject" id="subject" required>
-        <label for="subject" class="requiredInputLabel">Sujet<span class="errorSpanMsg" id="errorPasswordMsg"></span></label>
-        <input type="text" name="subject" id="subject" required>
+        <label for="message" class="requiredInputLabel">Message</label>
         <textarea name="message" id="message" cols="30" rows="10"></textarea>
         
-        <input type="submit" value="Se connecter" class="button-primary">
-        <a href="./register.php" class="button-secondary">S'inscrire</a>
+        <input type="submit" value="Envoyer le message" class="button-secondary">
     </form>
 
-    <script src="./js/login_form_validation.js"></script>
     <script src="./js/nav_profil_menu.js"></script>
     
 </body>
