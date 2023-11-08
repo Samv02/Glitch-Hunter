@@ -1,0 +1,80 @@
+.form-add-bug{
+    form{
+        gap: 30px;
+        background-color: #2F7ABE;
+        border-radius: 50px;
+        padding: 50px;
+        
+        .leftPartForm{
+           width: 25%; 
+           
+           .jaquette-game{
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               height: 350px;
+               background-color: white;
+               border-radius: 10px;
+               padding: 25px 0;
+               overflow: hidden;
+               img{
+                    width: 100%;
+               }
+           }
+           input#jaquetteGame{
+               display: none;
+           }
+        }
+        .rightPartForm{
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            
+            select{
+                width: 100%;
+                background: white;
+                border: none;
+                outline: none;
+                border-radius: 30px;
+                padding: 15px 30px;
+                font-size: 18px;
+                font-family: 'Inter';
+            }
+            input{
+                width: 100%;
+                margin-top: 15px;
+            }
+            textarea{
+                width: 100%;
+                height: 30vh;
+                border: none;
+                outline: none;
+                border-radius: 25px;
+                margin: 15px 0;
+                padding: 15px;
+                font-family: 'Inter';
+                font-size: 14px;
+                color: black;
+                resize: none;
+
+                &::placeholder{
+                    font-size: 14px;
+                    color: #636363;
+                }
+            }
+            .button-secondary{
+                background-color: #1c5d99;
+                color: white;
+                font-size: 18px;
+                align-self: end;
+                width: 50%;
+            
+                &:hover{
+                    background-color: #11497d;
+                }
+            }
+        }
+
+    }
+}

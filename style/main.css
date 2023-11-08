@@ -158,11 +158,9 @@ label span.errorSpanMsg {
   background: #f4f4f4;
   box-shadow: #d2d2d2 0px 0px 10px 1px;
   transition: all ease-in-out 0.2s;
-}
-#info-toast .flex {
   gap: 10px;
 }
-#info-toast .flex i {
+#info-toast i {
   color: green;
   font-size: 18px;
 }

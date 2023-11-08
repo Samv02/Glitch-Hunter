@@ -19,7 +19,7 @@
     <img src="./content/img/logo-principal.png" alt="Logo GlitchHunter Large Svg" class="logoTop" />
     <h1>Rencontrez-vous des difficultés pendant vos sessions de jeu ? Vous êtes au bon endroit pour trouver des solutions !</h1>
     <div class="centered-button">
-        <a href="./" class="butonTop button-primary">SIGNALER UN BUG</a>
+        <a href="./report-bug.php" class="butonTop button-primary">SIGNALER UN BUG</a>
     </div>
 
     <section class="content searchbar">

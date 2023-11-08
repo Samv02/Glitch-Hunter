@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlitchHunter | Home</title>
+    <title>GlitchHunter | Ajouter un jeu</title>
     <link rel="shortcut icon" href="./content/img/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="./style/reset.css">
@@ -34,18 +34,18 @@ if (strpos($currentURL, '?reg_err=success') !== false) {
         <i class="fa-solid fa-pen-to-square"></i>
         <h1>Demande d'ajout de jeu</h1>
     </section>
-    <section id="info-toast">
-        <?php
-        
-        if ($isSuccessfulImport) {
-            echo '<div class="flex">';
-            echo '<i class="fa-solid fa-check"></i>';
-            echo '<p>Requête de jeu envoyée avec succès.</p>';
-            echo '</div>';
-        }
-        
-        ?>
-    </section>
+    
+    <?php
+    
+    if ($isSuccessfulImport) {
+        echo '<div class="flex" id="info-toast">';
+        echo '<i class="fa-solid fa-check"></i>';
+        echo '<p>Requête de jeu envoyée avec succès.</p>';
+        echo '</div>';
+    }
+    
+    ?>
+    
     <section class="content form-add-game">
         <form action="./includes/reportGamePost.inc.php" method="post" enctype="multipart/form-data" class="flex">
             <div class="leftPartForm">
