@@ -73,6 +73,7 @@ if (strpos($currentURL, '?reg_err=success') !== false) {
                          }        
                     ?>
                 </select>
+                <a href="./report-game.php" class="add-game-button">Vous ne trouvez pas votre jeu ? Demandez à l'ajouter sur le site !</a>
                 <input type="text" name="titreBug" id="titreBug" placeholder="Donnez un titre à votre bug"/>
                 <textarea name="descriptionBug" id="descriptionBug" cols="30" rows="10" placeholder="Décrivez le bug rencontré"></textarea>
                 <input type="submit" value="Envoyer la proposition de jeu" class="button-secondary">

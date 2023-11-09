@@ -39,6 +39,14 @@
   font-size: 18px;
   font-family: "Inter";
 }
+.form-add-bug form .rightPartForm .add-game-button {
+  color: white;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.form-add-bug form .rightPartForm .add-game-button:hover {
+  text-decoration: underline;
+}
 .form-add-bug form .rightPartForm input {
   width: 100%;
   margin-top: 15px;
