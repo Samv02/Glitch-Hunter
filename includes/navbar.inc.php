@@ -45,7 +45,6 @@
             <div class="dropdown-menu" id="dropdown">
                 <a href="./my-posts.php"><i class="fas fa-edit"></i> Mes posts</a>
                 <a href="./liked-posts.php"><i class="fas fa-thumbs-up"></i> Mes likes</a>
-                <a href="./history.php"><i class="fas fa-history"></i> Mon historique</a>
                 <a href="./settings.php"><i class="fas fa-cogs"></i> Paramètres</a>
                 <a href="./accueil.php?action=10"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
             </div>
