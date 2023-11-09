@@ -47,7 +47,7 @@ if (strpos($currentURL, '?reg_err=success') !== false) {
     ?>
     
     <section class="content form-add-game">
-        <form action="./includes/reportGamePost.inc.php" method="post" enctype="multipart/form-data" class="flex">
+        <form action="./includes/reportGamePost.inc.php" method="post" enctype="multipart/form-data" class="flex" style="margin-bottom: 100px;">
             <div class="leftPartForm">
                 <label for="jaquetteGame" id="jaquetteGameUploadZone">
                     <p>Ajoutez la jaquette du jeu</p>

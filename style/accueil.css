@@ -29,7 +29,7 @@ body .searchbar {
   margin: 100px auto;
 }
 body .searchbar select {
-  width: 15%;
+  width: 20%;
   background: white;
   border: solid 1px black;
   outline: none;
@@ -40,7 +40,7 @@ body .searchbar select {
   line-height: 130%;
 }
 body .searchbar input[type=text] {
-  width: 75%;
+  width: 70%;
   border-radius: 0;
   border: none;
   border-top: 1px solid black;
@@ -63,12 +63,15 @@ body .searchbar input[type=submit] {
   font-weight: 500;
   line-height: 130%;
   border: 1px solid #2F7ABE;
-  background-color: white;
   border-radius: 0 50px 50px 0;
   width: 15%;
   background-color: #2F7ABE;
   color: white;
   cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+body .searchbar input[type=submit]:hover {
+  background-color: #154c80;
 }
 body .subjects .subject-selectors {
   display: flex;

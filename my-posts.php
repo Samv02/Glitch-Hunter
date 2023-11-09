@@ -42,12 +42,12 @@ $req_bug->execute(array($id_utilisateur));
         <i class="fa-solid fa-pen-to-square"></i>
         <h1>Mes Post</h1>
     </section>
-    <section class="content topic-list"> 
+    <section class="content topic-list" style="margin-bottom: 100px;"> 
         
         <?php
                 while($posts = $req_bug->fetch(PDO::FETCH_ASSOC)){
         ?>
-            <div class="topic">
+            <a href="./bug.php?id_bug=<?php echo $posts['id_bug']; ?>" class="topic">
                 <div class="content-topic">
                     <div class="title-topic">
                         <?php echo $posts['nom'] ?>
@@ -69,7 +69,7 @@ $req_bug->execute(array($id_utilisateur));
                 <div class="likes-topic">
                     Nb. Likes : <?php echo $posts['nb_likes'] ?>
                 </div>
-            </div>
+            </a>
         <?php
                 }        
         ?>

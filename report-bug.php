@@ -54,7 +54,7 @@ if (strpos($currentURL, '?reg_err=success') !== false) {
     ?>
 
     <section class="content form-add-bug">
-        <form action="./includes/reportBugPost.inc.php" method="post" enctype="multipart/form-data" class="flex">
+        <form action="./includes/reportBugPost.inc.php" method="post" enctype="multipart/form-data" class="flex" style="margin-bottom: 100px;">
             <div class="leftPartForm">
                 <div class="jaquette-game">
                     <!-- // Make the src of the image take the value of the option selected with js or php -->

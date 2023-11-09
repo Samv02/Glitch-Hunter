@@ -19,45 +19,30 @@
         <i class="fa-solid fa-thumbs-up"></i>
         <h1>Mes Likes</h1>
     </section>
-    <section class="content topic-list">
-        <div class="topic">
+    <section class="content topic-list" style="margin-bottom: 100px;">
+        <a href="./bug.php?id_bug=<?php echo $posts['id_bug']; ?>" class="topic">
             <div class="content-topic">
                 <div class="title-topic">
-                    Bug Pokemon : J'ai plus mon équipe
+                    <?php echo $posts['nom'] ?>
                 </div>
                 <div class="game-topic">
-                    Jeux : Pokemon
-                </div>
-                <div class="state-topic">
-                    Etat : Résolu
+                    <p>
+                        Jeu : <?php 
+                        $req_game = $bdd->prepare("SELECT nom_jeu FROM jeu WHERE id_jeu = ?");
+                        $req_game->execute(array($posts['id_jeu']));
+                        $result = $req_game->fetch(PDO::FETCH_ASSOC);
+                        echo $result['nom_jeu'];
+                        ?>
+                    </p>
                 </div>
                 <div class="description-topic">
-                    Dernier message de xXD4rKCramptesxX : C'est parce que en fait la technique de duplication de la génération 6 est équivalent à la région sud du pôle nord
+                    <?php echo $posts['description'] ?>
                 </div>
             </div>
             <div class="likes-topic">
-                Nb. Likes : 4000
+                Nb. Likes : <?php echo $posts['nb_likes'] ?>
             </div>
-        </div>
-        <div class="topic">
-            <div class="content-topic">
-                <div class="title-topic">
-                    Bug Pokemon : J'ai plus mon équipe
-                </div>
-                <div class="game-topic">
-                    Jeux : Pokemon
-                </div>
-                <div class="state-topic">
-                    Etat : Résolu
-                </div>
-                <div class="description-topic">
-                    Dernier message de xXD4rKCramptesxX : C'est parce que en fait la technique de duplication de la génération 6 est équivalent à la région sud du pôle nord
-                </div>
-            </div>
-            <div class="likes-topic">
-                Nb. Likes : 4000
-            </div>
-        </div>
+        </a>
     </section>
 </body>
 

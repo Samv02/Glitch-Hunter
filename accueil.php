@@ -22,19 +22,29 @@
         <a href="./report-bug.php" class="butonTop button-primary">SIGNALER UN BUG</a>
     </div>
 
+    <?php
+        $req = $bdd->prepare("SELECT * FROM jeu");
+        $req->execute();
+    ?>
     <section class="content searchbar">
-        <form action="" class="flex">
+        <form action="search.php?search=true" method="GET" class="flex">
             <select name="game" id="game">
-                <option value="minecraft">Minecraft</option>
-                <option value="leagueoflegends">League Of Legends</option>
+                <option value="0" id="no-game.png" selected disabled>Sélectionnez un jeu</option>
+
+                <?php
+                        while($result = $req->fetch(PDO::FETCH_ASSOC)){
+                ?>
+                            <option value="<?php echo $result["id_jeu"] ?>" id="<?php echo $result["image_jeu"] ?>"><?php echo $result["nom_jeu"] ?></option>
+                <?php
+                        }        
+                ?>
             </select>
-            <input type="text" name="serach" id="search" placeholder="Décrivez le bug que vous rencontrez...">
+            <input type="text" name="search" id="search" placeholder="Décrivez le bug que vous rencontrez...">
             <input type="submit" value="Rechercher">
         </form>
     </section>
 
     <?php
-        //Récupérer un tableau contenant les posts de l'utilisateur
         $req_bug = $bdd->prepare("SELECT * FROM bug ORDER BY nb_likes DESC LIMIT 5");
         $req_bug->execute(); 
     ?>
@@ -79,9 +89,8 @@
     </section>
 
     <?php
-        //Récupérer un tableau contenant les posts de l'utilisateur
         $req_bug = $bdd->prepare("SELECT * FROM bug ORDER BY date_publication DESC LIMIT 5");
-        $req_bug->execute(); 
+        $req_bug->execute();
     ?>
     <section class="content subjects recent-subjects">
         <div class="flex subject-selectors">
@@ -95,7 +104,7 @@
         <?php
                 while($posts = $req_bug->fetch(PDO::FETCH_ASSOC)){
         ?>
-            <div class="topic">
+            <a href="./bug.php?id_bug=<?php echo $posts['id_bug']; ?>" class="topic">
                 <div class="content-topic">
                     <div class="title-topic">
                         <?php echo $posts['nom'] ?>
@@ -117,7 +126,7 @@
                 <div class="likes-topic">
                     Nb. Likes : <?php echo $posts['nb_likes'] ?>
                 </div>
-            </div>
+            </a>
         <?php
                 }        
         ?>
