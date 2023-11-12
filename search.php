@@ -63,9 +63,9 @@
         <section class="content result-list">
             <?php
                 if (isset($_GET['game']) && isset($_GET['search'])) {
-                    $req_search = $bdd->prepare("SELECT * FROM bug WHERE id_jeu = ? AND description LIKE ? ORDER BY date_publication");
+                    $req_search = $bdd->prepare("SELECT * FROM bug WHERE id_jeu = ? AND description LIKE ? ORDER BY nb_likes DESC");
                     $req_search->execute(array($_GET['game'], '%' . $_GET['search'] . '%'));
-                    $result_search = $req_search->fetch(PDO::FETCH_ASSOC);
+                    $result_search = $req_search->fetchAll(PDO::FETCH_ASSOC);
                 }
     
                 if (isset($_GET['game'])) {
@@ -78,7 +78,7 @@
             <h2>Résultats pour : <span class="bold"><?php echo $_GET['search']; ?></span> dans le jeu : <span class="bold"><?php echo $result_game_title['nom_jeu']; ?></span></h2>
             <?php
             if ($result_search) {
-                while ($result = $result_search->fetch(PDO::FETCH_ASSOC)) {
+                foreach ($result_search as $result) {
             ?>
                     <a href="./bug.php?id_bug=<?php echo $result['id_bug']; ?>" class="topic">
                         <div class="content-topic">
@@ -197,11 +197,16 @@
 
     <section class="all-result-button">
         <h3>
-            Envie de voir la liste complète ?
+            Vous ne trouvez pas votre bug ?
         </h3>
-        <a href="./search.php" class="button-primary">
-            Voir tous les bugs
-        </a>
+        <div class="buttons-bottom" style="gap: 30px">
+            <a href="./report-bug.php" class="button-primary">
+                Ajouter mon bug
+            </a>
+            <a href="./search.php" class="button-secondary">
+                Voir tous les bugs
+            </a>
+        </div>
     </section>
 </body>
 

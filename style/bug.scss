@@ -1,0 +1,89 @@
+.page-title{
+    div{
+        padding: 0;
+        padding-top: 50px;
+        h1{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p{
+            color: white;
+            text-align: center;
+        }
+    }
+}
+
+.game-info{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    margin-bottom: 100px;
+    .leftpart{
+        width: 25%;
+
+        .jaquette-container{
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 25px;
+            margin-bottom: 15px;
+
+            img{
+                width: 100%;
+            }
+        }
+        h2{
+            font-size: 20px;
+            font-weight: 700;
+            width: 100%;
+            text-align: center;
+        }
+        a{
+            display: inline-block;
+            text-align: center;
+            margin: 0 auto;
+            text-decoration: underline;
+        }
+    }
+    .rightpart{
+        width: 75%;
+
+        .bug-post{
+            background-color: #2F7ABE;
+            padding: 20px;
+            border-radius: 20px;
+            .infos-post{
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                .profil-picture-container{
+                    width: 100px;
+                    height: 100px;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .post_info_user{
+                    h3{
+                        color: white;
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        color: white;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .description-bug{
+                background-color: white;
+                padding: 20px;
+                margin-top: 20px;
+                border-radius: 10px;
+            }
+        }
+    }
+}

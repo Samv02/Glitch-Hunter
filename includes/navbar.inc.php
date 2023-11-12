@@ -27,7 +27,7 @@
 ?>
 
 <header class="flex ai-c jc-sb">
-    <a href="/" title="Accueil">
+    <a href="./accueil.php" title="Accueil">
         <img src="./content/img/logo-principal.png" alt="Logo GlitchHunter Small Svg">
     </a>
     <nav class="<?php if($user_is_logged_in){ echo 'user_is_logged_in'; }?>">
